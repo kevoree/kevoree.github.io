@@ -5,7 +5,11 @@ version 0.12.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+```sh
+npm i
+bower i
+grunt serve
+```
 
 ## Testing
 
