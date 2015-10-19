@@ -84,30 +84,6 @@ a.topnav {
     font-size: 150px;
 }
 
-.big-font {
-    font-size: 3em;
-}
-
-/*.documentation .panel-body {
-    padding: 0;
-}
-
-.documentation .panel-body > .panel {
-    border-radius: 0;
-    border: none;
-    margin: 0;
-    padding-left: 15px;
-}
-
-.documentation .panel-body > .panel > * {
-    border-left: 1px solid #ddd;
-}*/
-
-/*.documentation a {
-    color: #333;
-    text-decoration: none;
-}*/
-
 .learn-menu-container {
     border-right: 1px solid #ddd;
 }
@@ -129,6 +105,19 @@ a.topnav {
 
 .learn-menu a:hover {
     font-weight: bold;
+}
+
+.shortcut {
+    display: inline-block;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 5px;
+    box-shadow: inset 0 1px 0 #666,0 1px 0 #bbb;
+    padding: 5px 9px;
+    font-size: 1em;
 }
 
 pre {

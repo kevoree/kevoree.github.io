@@ -17,7 +17,7 @@ Once installed, you can start a Kevoree runtime from the command-line:
 
 When you start a Kevoree runtime without giving a bootstrap model or command-line
 parameters, Kevoree will start it with a default model which can be written in
-<strong>KevScript</strong> like this:
+<a data-ui-sref="kevscript"><strong>KevScript</strong></a> like this:
 <pre>
     <code class="hljs nohighlight" data-hljs>add node0: JavascriptNode
 add sync: WSGroup
@@ -28,6 +28,9 @@ set sync.port/node0 = '9000'
 set node0.logLevel = 'info'</code>
 </pre>
 
-<pre>
-    <code class="hljs javascript" data-hljs>var AbstractComponent = require('kevoree-entities').AbstractComponent;</code>
-</pre>
+<p>
+    This will give you the possibility to access the current Kevoree model from
+    the <a href="http://editor.kevoree.org" target="_blank">Kevoree Web Editor</a>,
+    using <code>127.0.0.1:9000</code> to connect to your runtime from the editor
+    menu <code>File > Open from node</code>.
+</p>
