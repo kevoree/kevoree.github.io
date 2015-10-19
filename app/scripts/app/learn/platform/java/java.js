@@ -7,8 +7,7 @@ angular.module('app')
             url: '/java',
             views: {
                 '@learn': {
-                    templateUrl: 'scripts/app/learn/platform/java/java.html',
-                    controller: 'JavaPlatformCtrl'
+                    templateUrl: 'scripts/app/learn/platform/java/java.html'
                 }
             }
         });

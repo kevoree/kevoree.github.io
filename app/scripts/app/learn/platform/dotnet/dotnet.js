@@ -7,8 +7,7 @@ angular.module('app')
             url: '/dotnet',
             views: {
                 '@learn': {
-                    templateUrl: 'scripts/app/learn/platform/dotnet/dotnet.html',
-                    controller: 'DotnetPlatformCtrl'
+                    templateUrl: 'scripts/app/learn/platform/dotnet/dotnet.html'
                 }
             }
         });

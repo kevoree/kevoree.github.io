@@ -2,12 +2,12 @@
 
 angular.module('app')
     .config(function ($stateProvider) {
-        $stateProvider.state('platform', {
+        $stateProvider.state('kevscript', {
             parent: 'learn',
-            url: '/kevscript',
+            url: '/platform',
             views: {
                 '': {
-                    templateUrl: 'scripts/app/learn/platform/platform.html'
+                    templateUrl: 'scripts/app/learn/kevscript/kevscript.html'
                 }
             }
         });
