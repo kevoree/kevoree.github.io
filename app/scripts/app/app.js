@@ -2,7 +2,7 @@
 
 angular.module('app', [
     'ui.router',
-    'highlight',
+    'hljs',
     'ncy-angular-breadcrumb'
 ]).config(function($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');

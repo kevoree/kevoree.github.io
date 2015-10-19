@@ -9,7 +9,7 @@
 <h3>Overview</h3>
 Here is an example of a basic KevScript:
 <pre>
-    <code class="hljs nohighlight" data-highlight>add node0: JavascriptNode
+    <code class="hljs nohighlight" data-hljs>add node0: JavascriptNode
 add node0.ticker: Ticker
 add node1: JavaNode
 add node1.printer: ConsolePrinter
@@ -35,3 +35,43 @@ network node0.ip.lo 127.0.0.1</code>
     <br/>
     <img src="/images/learn/kevscript/model_overview.png" class="img-responsive" />
 </p>
+
+<h3>Usage in Java</h3>
+<p>
+    You can use the <strong>KevScript engine</strong> using its <strong>Java API</strong>.
+    In your <strong>pom.xml</strong> just add:
+    <pre><code class="hljs xml" data-hljs>&lt;dependency&gt;
+    &lt;groupId&gt;org.kevoree&lt;/groupId&gt;
+    &lt;artifactId&gt;org.kevoree.kevscript&lt;/artifactId&gt;
+    &lt;version&gt;${kevoree.kevscript.version}&lt;/version&gt;
+&lt;/dependency></code></pre>
+</p>
+
+<h3>Usage in JavaScript</h3>
+<h4>In Node.js</h4>
+<pre>
+    <code class="hljs bash" data-hljs>npm i kevoree-kevscript --save</code>
+</pre>
+
+Then you can access the KevScript Engine API like so:
+<pre>
+    <code class="hljs javascript" data-hljs>var KevScript = require('kevoree-kevscript');
+
+var kevs = new KevScript();
+kevs.parse('add node0: JavascriptNode', null, function (err, model) {
+    if (err) {
+        throw err;
+    } else {
+        // the resulting Kevoree Model in-memory
+        // TODO: do something with the model
+    }
+});</code>
+</pre>
+<p>
+    More information can be found on the <a href="https://github.com/kevoree/kevoree-js-kevscript" target="_blank">GitHub project</a>.
+</p>
+
+<h4>In the browser</h4>
+<pre>
+    <code class="hljs bash" data-hljs>bower i kevoree-kevscript --save</code>
+</pre>

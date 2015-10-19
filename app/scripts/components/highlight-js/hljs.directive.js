@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('highlight', [])
-    .directive('highlight', function () {
+angular.module('hljs', [])
+    .directive('hljs', function () {
         return {
             restrict: 'A',
             link: function (scope, elem) {
