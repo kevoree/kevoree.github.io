@@ -1,5 +1,8 @@
 {
-    "destination": "build",
+    "metadata": {
+        "title": "Kevoree",
+        "description": "Kevoree Official WebSite"
+    },
     "plugins": {
         "metalsmith-markdown": {},
         "metalsmith-layouts": {

@@ -2,7 +2,7 @@
 title: 'Kevoree | Learn | KevScript'
 layout: learn-page.html
 ---
-## Kevoree Script aka KevScript
+### Kevoree Script aka KevScript
 KevScript is a scripting language to manipulate models. **It is not a general purpose language.**  
 
 A KevScript engine will take a script and a model as inputs, and return a new model modified according to the script.

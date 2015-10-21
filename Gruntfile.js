@@ -27,7 +27,11 @@ module.exports = function(grunt) {
         },
 
         metalsmith: {
-            options: metalsmithConfig
+            main: {
+                src: 'src',
+                dest: 'build',
+                options: metalsmithConfig
+            }
         }
     });
 
