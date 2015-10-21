@@ -3,7 +3,8 @@
     "plugins": {
         "metalsmith-markdown": {},
         "metalsmith-layouts": {
-            "engine": "handlebars"
+            "engine": "handlebars",
+            "partials": "partials"
         }
     }
 }

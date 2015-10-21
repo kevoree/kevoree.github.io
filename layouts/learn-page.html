@@ -9,7 +9,16 @@
     {{> nav }}
 
     <div id="main-container">
-        {{{ contents }}}
+        <hr class="clearfix"/>
+        <div class="container">
+            <div class="row">
+                {{> menu }}
+
+                <div class="col-md-9">
+                    {{{ contents }}}
+                </div>
+            </div>
+        </div>
     </div>
 
     {{> footer }}
