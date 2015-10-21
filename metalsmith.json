@@ -4,10 +4,19 @@
         "description": "Kevoree Official WebSite"
     },
     "plugins": {
+        "./lib/metalsmith-menu.js": {},
         "metalsmith-markdown": {},
         "metalsmith-layouts": {
             "engine": "handlebars",
             "partials": "partials"
+        },
+        "metalsmith-browser-sync": {
+            "files": [
+                "lib/**/*.*",
+                "src/**/*.*",
+                "partials/**/*.*",
+                "layouts/**/*.*"
+            ]
         }
     }
 }
