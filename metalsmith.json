@@ -1,0 +1,9 @@
+{
+    "destination": "build",
+    "plugins": {
+        "metalsmith-markdown": {},
+        "metalsmith-layouts": {
+            "engine": "handlebars"
+        }
+    }
+}
