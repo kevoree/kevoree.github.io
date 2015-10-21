@@ -10,10 +10,10 @@ npm i
 
 Then build the static website using:
 ```bash
-grunt
+npm run build
 ```
 
 You can also run a server locally for development with real-time reloads:
 ```bash
-grunt serve
+npm run dev
 ```
