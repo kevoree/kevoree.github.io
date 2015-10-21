@@ -1,0 +1,14 @@
+{
+    "metadata": {
+        "title": "Kevoree",
+        "description": "Kevoree Official WebSite"
+    },
+    "plugins": {
+        "./lib/metalsmith-menu.js": {},
+        "metalsmith-markdown": {},
+        "metalsmith-layouts": {
+            "engine": "handlebars",
+            "partials": "partials"
+        }
+    }
+}

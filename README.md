@@ -1,15 +1,21 @@
-# kevoree-www
+## Kevoree Official WebSite
+
+This project contains the Markdown files used to generated http://kevoree.org
 
 :warning: This is a work in progress
 
-## Build & development
-
-```sh
+### Dev
+Clone this repository and then:
+```bash
 npm i
-bower i
-grunt serve
 ```
 
-## Testing
+Then build the static website using:
+```bash
+npm run build
+```
 
-Running `grunt test` will run the unit tests with karma.
+You can also run a server locally for development with real-time reloads:
+```bash
+npm run dev
+```
