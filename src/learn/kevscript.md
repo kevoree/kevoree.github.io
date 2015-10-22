@@ -46,6 +46,12 @@ In your **pom.xml** just add:
 </dependency>
 ```
 
+Then you can access the KevScript Engine API like so:
+```java
+KevScriptEngine engine = new KevScriptEngine(modelToModify);
+ContainerRoot resultModel = engine.execute("add node1 : JavaNode");
+```
+
 ### Usage in JavaScript
 #### In Node.js
 ```bash
@@ -57,18 +63,29 @@ Then you can access the KevScript Engine API like so:
 var KevScript = require('kevoree-kevscript');
 
 var kevs = new KevScript();
-kevs.parse('add node0: JavascriptNode', null, function (err, model) {
+kevs.parse('add node0: JavascriptNode', modelToModify, function (err, model) {
     if (err) {
         throw err;
     } else {
-        // the resulting Kevoree Model in-memory
-        // TODO: do something with the model
+        // "model" is the resulting ContainerRoot
     }
 });
 ```
-More information can be found on the [GitHub project](https://github.com/kevoree/kevoree-js-kevscript).
+More information on the JavaScript API can be found on the [GitHub project](https://github.com/kevoree/kevoree-js-kevscript).
 
 #### In the browser
 ```bash
 bower i kevoree-kevscript --save
+```
+
+Then you can access the KevScript Engine API globally like so:
+```js
+var kevs = new KevoreeKevscript();
+kevs.parse('add node0: JavascriptNode', modelToModify, function (err, model) {
+    if (err) {
+        throw err;
+    } else {
+        // "model" is the resulting ContainerRoot
+    }
+});
 ```
