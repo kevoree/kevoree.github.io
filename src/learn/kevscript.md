@@ -1,7 +1,6 @@
 ---
 title: 'Kevoree | Learn | KevScript'
 layout: learn-page.html
-menu: ['test', 'a', 1]
 ---
 ### Kevoree Script aka KevScript
 KevScript is a scripting language to manipulate models. **It is not a general purpose language.**  
