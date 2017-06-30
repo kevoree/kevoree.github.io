@@ -1,0 +1,76 @@
+---
+---
+
+@import 'bootstrap';
+@import 'top-banner';
+@import 'sidenav';
+
+body {
+  padding-top: 50px;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+}
+
+.CodeMirror {
+  height: auto;
+  margin-bottom: 10px;
+}
+
+a:hover {
+  color: $k-channel-color;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav.navbar-nav li.active {
+  border-bottom: 2px solid $k-channel-color;
+}
+
+.container {
+  .content {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 15px;
+
+    .inner-content {
+      flex: 1;
+      margin-left: 10px;
+
+      h2 {
+        height: 35px;
+      }
+
+      hr {
+        height: 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #eee;
+      }
+
+      .post {
+        padding-bottom: 35px;
+      }
+    }
+  }
+}
+
+pre {
+  background-color: inherit;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  padding: 0px;
+
+  .hljs {
+    padding: 0.5em 0.5em 0.7em 0.5em;
+  }
+}

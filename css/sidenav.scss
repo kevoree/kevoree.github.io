@@ -1,0 +1,28 @@
+@import 'colors';
+
+.sidenav {
+  font-size: 14px;
+  width: 210px;
+  margin-right: 10px;
+
+  .nav {
+    li {
+      a {
+        padding: 0;
+      }
+      a:hover {
+        background-color: inherit;
+      }
+    }
+
+    li.active a {
+      color: $k-channel-color;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
