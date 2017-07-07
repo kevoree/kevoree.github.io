@@ -1,8 +1,9 @@
 ---
+id: kevscript
 layout: page
-title: KevScript
-permalink: /docs/kevscript.html
-group: sidenav
+title: Docs | Advanced | KevScript
+section: docs
+sidenav: nav-docs.html
 ---
 ## Kevoree Script aka KevScript
 KevScript is a scripting language to manipulate models. **It is not a general purpose language.**  

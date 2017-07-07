@@ -1,9 +1,0 @@
-{% for node in site.pages %}
-  {% if group == null or group == node.group %}
-    {% if node.path == page.path %}
-      <li class="active"><a href="{{node.url}}" class="active">{{ node.menu | default: node.title }}</a></li>
-    {% else %}
-      <li><a href="{{node.url}}">{{ node.menu | default: node.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}

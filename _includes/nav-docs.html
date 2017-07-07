@@ -1,0 +1,12 @@
+{% for section in site.data.nav_docs %}
+  <div class="nav-section">
+    <h3>{{ section.title }}</h3>
+    <ul class="nav">
+      {% for item in section.items %}
+        <li>
+          {{ item | sidebar_link: 'docs':section.id }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}

@@ -2,13 +2,13 @@
 layout: page
 title: About
 permalink: /about.html
-group: nav-right
+section: about
 ---
 ## About
 This project is mainly designed by:
  - [François Fouquet](https://github.com/dukeboard)
  - Erwan Daubert
- 
+
 The development team is the following:
  - [Maxime Tricoire](https://github.com/maxleiko)
  - [Olivier Barais](https://github.com/barais)

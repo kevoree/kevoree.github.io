@@ -4,7 +4,12 @@
 
   <div class="container">
     <div class="content">
-      {% include sidenav.html %}
+      <div class="sidenav">
+      {% if page.sidenav %}
+      {% include {{ page.sidenav }} %}
+      {% endif %}
+      </div>
+
       <div class="inner-content">
         {{ content | markdownify }}
       </div>

@@ -1,5 +1,8 @@
 ---
 layout: page
 title: Docs
-group: nav-left
+section: docs
+sidenav: nav-docs.html
 ---
+# Getting started
+Kevoree is a set of tools that allows

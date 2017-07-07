@@ -2,8 +2,10 @@
 ---
 
 @import 'bootstrap';
+@import 'font-awesome';
 @import 'top-banner';
 @import 'sidenav';
+// @import 'highlight';
 
 body {
   padding-top: 50px;
@@ -14,6 +16,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
+}
+
+blockquote {
+  background-color: $alert-warning-bg;
 }
 
 .CodeMirror {
@@ -30,9 +36,16 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-
-.nav.navbar-nav li.active {
+.nav.navbar-nav li {
+  border-bottom: 2px solid #222;
+}
+.nav.navbar-nav li a.active {
   border-bottom: 2px solid $k-channel-color;
+}
+.navbar-nav > li > a.nav-icon {
+  font-size: 29px;
+  line-height: 30px;
+  padding: 10px;
 }
 
 .container {
@@ -59,18 +72,5 @@ a:hover {
         padding-bottom: 35px;
       }
     }
-  }
-}
-
-pre {
-  background-color: inherit;
-  border-width: initial;
-  border-style: none;
-  border-color: initial;
-  border-image: initial;
-  padding: 0px;
-
-  .hljs {
-    padding: 0.5em 0.5em 0.7em 0.5em;
   }
 }

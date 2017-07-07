@@ -1,9 +1,9 @@
 ---
+id: helloworld-in-java
 layout: page
-title: Platforms | HelloWorld in Java
-permalink: /docs/platforms/helloworld-in-java.html
-group: sidenav
-menu: HelloWorld in Java
+title: Docs | QuickStart | HelloWorld in Java
+section: docs
+sidenav: nav-docs.html
 ---
 ## HelloWorld in Java
 ```java

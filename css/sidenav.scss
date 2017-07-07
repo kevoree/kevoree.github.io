@@ -7,6 +7,7 @@
 
   .nav {
     li {
+      padding-left: 5px;
       a {
         padding: 0;
       }
@@ -15,14 +16,15 @@
       }
     }
 
-    li.active a {
+    li a.active {
       color: $k-channel-color;
     }
   }
 
-  h3 {
+  .nav-section h3 {
     text-transform: uppercase;
     margin-top: 20px;
     font-size: 14px;
+    font-weight: bold;
   }
 }
