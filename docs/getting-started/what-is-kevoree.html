@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Kevoree - Docs | What is Kevoree?</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/cm-mode-kevscript@1.0.2/src/theme/kevscript.css">
+   <link rel="stylesheet" type="text/css" href="/css/style.css" >
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/mode.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/lint.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+   <script src="/js/main.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/images/kevoree.png" alt="Kevoree logo" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog/blog.html">Blog</a></li>
+        <li><a href="/docs/getting-started/what-is-kevoree.html" class="active">Docs</a></li>
+        <li><a href="/download/download.html">Download</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://twitter.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="sidenav">
+      
+      
+  <div class="nav-section">
+    <h3>Getting started</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/getting-started/what-is-kevoree.html" class="active">What is Kevoree?</a>
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Quick Start</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/quickstart/helloworld-in-java.html">HelloWorld in Java</a>
+        </li>
+      
+        <li>
+          <a href="/docs/quickstart/helloworld-in-js.html">HelloWorld in JavaScript</a>
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Advanced</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/advanced/kevscript.html">KevScript</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+      
+      </div>
+
+      <div class="inner-content">
+        <h1 id="what-is-kevoree">What is Kevoree?</h1>
+<p>Kevoree is a set of tools designed to help you create and manage distributed systems, using an approach called <strong>model@runtime</strong>.<br />
+This approach aims at taming the complexity of distributed adaptable systems (DDAS).</p>
+
+<p><strong>Reason 1</strong><br />
+To perform an adaptation, a system has to know technical details about deployed elements in order to do the provisioning.</p>
+
+<blockquote>
+  <p>In Kevoree we propose to interact through an abstraction layer (model) which contains only simple primitives, thus, CRUD operations on elements. As a result, adaptations are simpler and the complexity is delegated to the execution platform (eg. the nodes) which knows the technical details about how to perform those adaptations.</p>
+</blockquote>
+
+<p><strong>Reason 2</strong><br />
+System adaptations can be complex to plan and introspection is complex.</p>
+
+<blockquote>
+  <p>In Kevoree we propose to interact asynchronously with a local model layer in order to express foreseen modifications. These modifications are then send to a node which order and execute them.</p>
+</blockquote>
+
+<p>The idea of <strong>model@runtime</strong> can be explain in 4 steps:</p>
+<ol>
+  <li>A model keep an up-to-date abstract of the state of the system (eg. number of instances, their types, their parameters, etc.)</li>
+  <li>To perform an adaptation on the system, we interact only by modifying the abstraction</li>
+  <li>We send the abstraction to a runtime, which will apply the modifications on the running system</li>
+  <li>The system now reflects the abstract model, and further adaptations can be requested</li>
+</ol>
+
+<!-- ![modelATruntime](modelATruntime2.png) -->
+
+<p><strong>Reason 3</strong><br />
+Distributed systems are often unsynchronized due to connection failure.</p>
+
+<blockquote>
+  <p>In Kevoree, we propose to interact through an asynchronous model. Thus, the system will take care of using different strategies to send the model to other running platforms asynchronously as well.</p>
+</blockquote>
+
+<!-- ![modelATruntime](distModelAtRuntime.png) -->
+
+<h3 id="the-kevoree-model-abstraction">The Kevoree model abstraction</h3>
+<p>This screenshot shows a distributed Kevoree system. Every nodes (the white rectangles) are sharing the same abstract model using a group (the green circle) and those nodes are running some components (the black boxes) that can share messages using the connected channels (the orange circles).</p>
+
+<p><img src="/images/docs/model_overview.png" alt="Model overview in the Kevoree Web Editor" /></p>
+
+<p>At any point in time you can get such abstraction of a Kevoree system using the <a href="http://editor.kevoree.org">Kevoree Web Editor</a> and connecting to your own running system.</p>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

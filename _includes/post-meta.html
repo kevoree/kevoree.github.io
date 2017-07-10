@@ -1,5 +1,0 @@
-{% if author.href != null %}
-<p class="text-muted">{{ date | date: "%B %d, %Y" }} by <a href="{{ author.href | external_url }}" target="_blank">{{ author.name | default: author | default: 'kevoree' }}</a></p>
-{% else %}
-<p class="text-muted">{{ date | date: "%B %d, %Y" }} by {{ author.name | default: author | default: 'kevoree' }}</p>
-{% endif %}
