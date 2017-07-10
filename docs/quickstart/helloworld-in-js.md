@@ -7,6 +7,9 @@ sidenav: nav-docs.html
 ---
 ## HelloWorld in JavaScript
 The sources of this example are available at [github.com/kevoree/samples](https://github.com/kevoree/samples/tree/master/js/helloworld)
+```sh
+git clone git@github.com:kevoree/samples.git
+```
 
 > <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;In order to get started you need [NodeJS](https://nodejs.org/en/download/package-manager/)  
 
@@ -22,7 +25,7 @@ You are now ready to start your first Kevoree JavaScript runtime in development 
 ```
 npm start
 ```
-Now you should be able to see something like:
+Now you should be able to see something like this in your console:
 ```text
 17:30:17 HelloWorld      Hello World!
 17:30:17 Core            Model deployed successfully: 5 adaptations (119ms)

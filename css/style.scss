@@ -6,6 +6,7 @@
 @import 'top-banner';
 @import 'sidenav';
 @import 'highlight';
+@import 'footer';
 
 body {
   padding-top: 50px;
@@ -14,21 +15,23 @@ body {
   overflow-y: scroll;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 10px;
-}
-
-blockquote {
-  background-color: $alert-warning-bg;
-}
-
-img {
-  align-self: center;
-}
-
 .CodeMirror {
   height: auto;
   margin-bottom: 10px;
+
+  pre {
+    padding-left: 8px;
+  }
+}
+
+.CodeMirror.cm-s-kevscript {
+  background-color: #373737;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+}
+
+.cm-s-kevscript .CodeMirror-gutters {
+  box-shadow: none;
 }
 
 a:hover {
@@ -56,11 +59,19 @@ a:hover {
   .content {
     display: flex;
     align-items: flex-start;
-    padding-top: 15px;
+    padding: 15px 0 35px 0;
 
     .inner-content {
       flex: 1;
       margin-left: 10px;
+
+      h1, h2, h3, h4, h5, h6 {
+        // margin-top: 10px;
+      }
+
+      blockquote {
+        background-color: $alert-warning-bg;
+      }
 
       h2 {
         height: 35px;
@@ -70,6 +81,11 @@ a:hover {
         height: 0;
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #eee;
+      }
+
+      img {
+        align-self: center;
+        box-shadow: 3px 3px 10px #333;
       }
 
       .post {

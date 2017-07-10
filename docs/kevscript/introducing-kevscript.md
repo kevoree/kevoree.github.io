@@ -1,7 +1,7 @@
 ---
-id: kevscript
+id: introducing-kevscript
 layout: page
-title: Docs | Advanced | KevScript
+title: Docs | KevScript | Introducing KevScript
 section: docs
 sidenav: nav-docs.html
 ---

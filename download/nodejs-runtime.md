@@ -12,7 +12,7 @@ npm i -g kevoree-cli
 ```
 
 This will give you access to the command-line:
-```sh
+```text
 $ kevoree -h
 
   Usage: kevoree [options] [command]
