@@ -7,7 +7,7 @@ title: 'Model@Runtime approach for distributed and reconfigurable systems'
   <div class="minitext">{{ site.description }}</div>
 
   <div class="buttons-unit">
-    <a href="/docs/docs.html" class="button">Get Started</a>
+    <a href="/docs/getting-started/what-is-kevoree.html" class="button">Get Started</a>
     <a href="/download/download.html" class="button">Download</a>
   </div>
 </div>
