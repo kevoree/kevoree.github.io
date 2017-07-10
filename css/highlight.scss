@@ -1,0 +1,29 @@
+.highlight {
+  table {
+    width: 100%;
+
+    .gutter {
+      width: 40px;
+    }
+
+    pre {
+      padding: 5px 8px 5px 5px;
+      border-radius: 0;
+      color: #ccc;
+      background-color: #373737;
+    }
+
+    .code {
+      pre {
+        padding: 5px 5px 5px 8px;
+
+        .k  { color: #e06c75; }
+        .kr { color: #c678dd; }
+        .kc { color: #d19a66; }
+        .mi { color: #d19a66; }
+        .s1 { color: #98c379; }
+        .nb { color: #56b6c2; }
+      }
+    }
+  }
+}

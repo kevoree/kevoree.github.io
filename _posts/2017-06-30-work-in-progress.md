@@ -8,5 +8,7 @@ author:
   name: leiko
   href: https://github.com/maxleiko
 ---
-Please be aware that the site is a work in progress currently.  
-We will keep you posted **asap**.
+Please be aware that this site is a work in progress currently.  
+You may find unfinished docs, articles.  
+
+Sorry for the inconvenience, don't hesitate to visit the website again in a near future.

@@ -8,7 +8,7 @@ title: 'Model@Runtime approach for distributed and reconfigurable systems'
 
   <div class="buttons-unit">
     <a href="/docs/docs.html" class="button">Get Started</a>
-    <a href="/downloads/downloads.html" class="button">Download</a>
+    <a href="/download/download.html" class="button">Download</a>
   </div>
 </div>
 <div class="container">
