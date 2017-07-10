@@ -1,4 +1,10 @@
 -
+  id: getting-started
+  title: Getting started
+  items:
+    - id: what-is-kevoree
+      title: What is Kevoree?
+-
   id: quickstart
   title: Quick Start
   items:

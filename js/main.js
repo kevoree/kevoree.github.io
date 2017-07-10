@@ -15,4 +15,8 @@ $(document).ready(function() {
       value: block.value
     });
   });
+
+  $('img').each(function (i, block) {
+    $(block).parent().css('text-align', 'center');
+  });
 });
