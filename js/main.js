@@ -1,10 +1,9 @@
 $(document).ready(function() {
-  $('.language-js .code pre').each(function (i, block) {
-    hljs.highlightBlock(block);
-  });
-
-  $('.language-java .code pre').each(function (i, block) {
-    hljs.highlightBlock(block);
+  var LANGUAGES = [ 'js', 'java', 'xml' ].map(function (language) {
+    $('.language-' + language + ' .code pre').each(function (i, block) {
+      $(block).addClass(language);
+      hljs.highlightBlock(block);
+    });
   });
 
   $('textarea.kevscript').each(function (i, block) {
@@ -12,7 +11,8 @@ $(document).ready(function() {
       mode: 'kevscript',
       theme: 'kevscript',
       readOnly: true,
-      value: block.value
+      value: block.value,
+      lineNumbers: true
     });
   });
 

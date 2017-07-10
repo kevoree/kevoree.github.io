@@ -3,7 +3,8 @@
 .sidenav {
   font-size: 14px;
   width: 210px;
-  margin-right: 10px;
+  min-width: 210px;
+  margin: 15px 10px 0 0;
 
   .nav {
     li {

@@ -2,18 +2,33 @@
   table {
     width: 100%;
 
-    .gutter {
-      width: 40px;
-    }
-
     pre {
-      padding: 5px 8px 5px 5px;
+      padding: 5px;
       border-radius: 0;
+      border: 0;
       color: #ccc;
       background-color: #373737;
     }
 
-    .code {
+    .gutter {
+      display: inline-block;
+      width: 31px;
+
+      pre.lineno {
+        margin-bottom: 0;
+        background: #3d3d3d;
+        border-right: 1px solid #5d5d5d;
+      }
+    }
+
+    tr {
+      display: flex;
+    }
+
+    td.code {
+      display: inline-block;
+      flex: 1;
+
       pre {
         padding: 5px 5px 5px 8px;
 

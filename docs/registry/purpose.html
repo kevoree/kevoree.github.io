@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <title>Kevoree - Docs | Advanced | KevScript</title>
+   <title>Kevoree - Docs | Registry | Purpose of the registry</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
@@ -82,11 +82,34 @@
   </div>
 
   <div class="nav-section">
-    <h3>Advanced</h3>
+    <h3>KevScript</h3>
     <ul class="nav">
       
         <li>
-          <a href="/docs/advanced/kevscript.html" class="active">KevScript</a>
+          <a href="/docs/kevscript/introducing-kevscript.html">Introducing KevScript</a>
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/web-editor.html">In the Web editor</a>
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/java.html">In Java</a>
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/js.html">In JavaScript</a>
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Registry</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/registry/purpose.html" class="active">Purpose</a>
         </li>
       
     </ul>
@@ -97,42 +120,13 @@
       </div>
 
       <div class="inner-content">
-        <h2 id="kevoree-script-aka-kevscript">Kevoree Script aka KevScript</h2>
-<p>KevScript is a scripting language to manipulate models. <strong>It is not a general purpose language.</strong></p>
-
-<p>A KevScript engine will take a script and a model as inputs, and return a new model modified according to the script.</p>
-<blockquote>
-  <p>A KevScript engine in short is:<br />
-<code class="highlighter-rouge">(kevscript, inModel) =&gt; outModel</code></p>
-</blockquote>
-
-<h3 id="overview">Overview</h3>
-<p>Here is an example of a basic KevScript:</p>
-<textarea class="kevscript">add node0: JavascriptNode
-add node0.ticker: Ticker
-add node1: JavaNode
-add node1.printer: ConsolePrinter
-add sync: WSGroup
-add chan: RemoteWSChan
-
-attach node0, node1 sync
-
-bind node0.ticker.tick chan
-bind node1.printer.input chan
-
-set sync.master = "node0"
-set chan.uuid = "eW9sb3N3YWc="
-set chan.host = "ws.kevoree.org"
-
-network node0.ip.lo 127.0.0.1</textarea>
-
-<p>Using this KevScript as an input to the engine, and an empty model as context
-model, the output will look like this in the <a href="http://editor.kevoree.org">Kevoree Web Editor</a>:</p>
-
-<p><img src="/images/docs/model_overview.png" alt="KevScript overview" /></p>
+        <h2 id="what-is-the-purpose-of-a-kevoree-registry">What is the purpose of a Kevoree registry?</h2>
+<p>TODO</p>
 
       </div>
     </div>
   </div>
+
+  
 </body>
 </html>

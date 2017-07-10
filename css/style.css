@@ -10203,7 +10203,8 @@ button.close {
 .sidenav {
   font-size: 14px;
   width: 210px;
-  margin-right: 10px;
+  min-width: 210px;
+  margin: 15px 10px 0 0;
 }
 .sidenav .nav li {
   padding-left: 5px;
@@ -10227,34 +10228,48 @@ button.close {
 .highlight table {
   width: 100%;
 }
-.highlight table .gutter {
-  width: 40px;
-}
 .highlight table pre {
-  padding: 5px 8px 5px 5px;
+  padding: 5px;
   border-radius: 0;
+  border: 0;
   color: #ccc;
   background-color: #373737;
 }
-.highlight table .code pre {
+.highlight table .gutter {
+  display: inline-block;
+  width: 31px;
+}
+.highlight table .gutter pre.lineno {
+  margin-bottom: 0;
+  background: #3d3d3d;
+  border-right: 1px solid #5d5d5d;
+}
+.highlight table tr {
+  display: flex;
+}
+.highlight table td.code {
+  display: inline-block;
+  flex: 1;
+}
+.highlight table td.code pre {
   padding: 5px 5px 5px 8px;
 }
-.highlight table .code pre .k {
+.highlight table td.code pre .k {
   color: #e06c75;
 }
-.highlight table .code pre .kr {
+.highlight table td.code pre .kr {
   color: #c678dd;
 }
-.highlight table .code pre .kc {
+.highlight table td.code pre .kc {
   color: #d19a66;
 }
-.highlight table .code pre .mi {
+.highlight table td.code pre .mi {
   color: #d19a66;
 }
-.highlight table .code pre .s1 {
+.highlight table td.code pre .s1 {
   color: #98c379;
 }
-.highlight table .code pre .nb {
+.highlight table td.code pre .nb {
   color: #56b6c2;
 }
 
@@ -10265,21 +10280,22 @@ body {
   overflow-y: scroll;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 10px;
-}
-
-blockquote {
-  background-color: #fcf8e3;
-}
-
-img {
-  align-self: center;
-}
-
 .CodeMirror {
   height: auto;
   margin-bottom: 10px;
+}
+.CodeMirror pre {
+  padding-left: 8px;
+}
+
+.CodeMirror.cm-s-kevscript {
+  background-color: #373737;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+}
+
+.cm-s-kevscript .CodeMirror-gutters {
+  box-shadow: none;
 }
 
 a:hover {
@@ -10309,11 +10325,14 @@ a:hover {
 .container .content {
   display: flex;
   align-items: flex-start;
-  padding-top: 15px;
+  padding: 15px 0 35px 0;
 }
 .container .content .inner-content {
   flex: 1;
   margin-left: 10px;
+}
+.container .content .inner-content blockquote {
+  background-color: #fcf8e3;
 }
 .container .content .inner-content h2 {
   height: 35px;
@@ -10322,6 +10341,10 @@ a:hover {
   height: 0;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #eee;
+}
+.container .content .inner-content img {
+  align-self: center;
+  box-shadow: 3px 3px 10px #333;
 }
 .container .content .inner-content .post {
   padding-bottom: 35px;

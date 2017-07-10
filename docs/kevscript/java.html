@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <title>Kevoree - Docs | What is Kevoree?</title>
+   <title>Kevoree - Docs | KevScript | In Java</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
@@ -60,7 +60,7 @@
     <ul class="nav">
       
         <li>
-          <a href="/docs/getting-started/what-is-kevoree.html" class="active">What is Kevoree?</a>
+          <a href="/docs/getting-started/what-is-kevoree.html">What is Kevoree?</a>
         </li>
       
     </ul>
@@ -94,7 +94,7 @@
         </li>
       
         <li>
-          <a href="/docs/kevscript/java.html">In Java</a>
+          <a href="/docs/kevscript/java.html" class="active">In Java</a>
         </li>
       
         <li>
@@ -120,49 +120,53 @@
       </div>
 
       <div class="inner-content">
-        <h1 id="what-is-kevoree">What is Kevoree?</h1>
-<p>Kevoree is a set of tools designed to help you create and manage distributed systems, using an approach called <strong>model@runtime</strong>.<br />
-This approach aims at taming the complexity of distributed adaptable systems (DDAS).</p>
+        <h2 id="kevscript-in-java">KevScript in Java</h2>
 
-<p><strong>Reason 1</strong><br />
-To perform an adaptation, a system has to know technical details about deployed elements in order to do the provisioning.</p>
+<h3 id="maven-artifact">Maven Artifact</h3>
+<div class="language-xml highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.kevoree<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>org.kevoree.tools.kevscript<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>${kevoree.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<blockquote>
-  <p>In Kevoree we propose to interact through an abstraction layer (model) which contains only simple primitives, thus, CRUD operations on elements. As a result, adaptations are simpler and the complexity is delegated to the execution platform (eg. the nodes) which knows the technical details about how to perform those adaptations.</p>
-</blockquote>
+<h3 id="usage-example">Usage example</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="n">KevScriptEngine</span> <span class="n">kevs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">KevScriptEngine</span><span class="o">(</span><span class="s">"https://new-registry.kevoree.org"</span><span class="o">);</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="n">String</span> <span class="n">script</span> <span class="o">=</span> <span class="s">"add node: JavaNode/LATEST/LATEST"</span><span class="o">;</span>
+  <span class="kd">final</span> <span class="n">KevoreeFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultKevoreeFactory</span><span class="o">();</span> <span class="c1">// a factory to create models</span>
+  <span class="kd">final</span> <span class="n">ContainerRoot</span> <span class="n">model</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">createContainerRoot</span><span class="o">();</span> <span class="c1">// create an empty model</span>
+  <span class="n">factory</span><span class="o">.</span><span class="na">root</span><span class="o">(</span><span class="n">model</span><span class="o">);</span> <span class="c1">// ignore this but make sure you do it :p</span>
 
-<p><strong>Reason 2</strong><br />
-System adaptations can be complex to plan and introspection is complex.</p>
-
-<blockquote>
-  <p>In Kevoree we propose to interact asynchronously with a local model layer in order to express foreseen modifications. These modifications are then send to a node which order and execute them.</p>
-</blockquote>
-
-<p>The idea of <strong>model@runtime</strong> can be explain in 4 steps:</p>
-<ol>
-  <li>A model keep an up-to-date abstract of the state of the system (eg. number of instances, their types, their parameters, etc.)</li>
-  <li>To perform an adaptation on the system, we interact only by modifying the abstraction</li>
-  <li>We send the abstraction to a runtime, which will apply the modifications on the running system</li>
-  <li>The system now reflects the abstract model, and further adaptations can be requested</li>
-</ol>
-
-<!-- ![modelATruntime](modelATruntime2.png) -->
-
-<p><strong>Reason 3</strong><br />
-Distributed systems are often unsynchronized due to connection failure.</p>
-
-<blockquote>
-  <p>In Kevoree, we propose to interact through an asynchronous model. Thus, the system will take care of using different strategies to send the model to other running platforms asynchronously as well.</p>
-</blockquote>
-
-<!-- ![modelATruntime](distModelAtRuntime.png) -->
-
-<h3 id="the-kevoree-model-abstraction">The Kevoree model abstraction</h3>
-<p>This screenshot shows a distributed Kevoree system. Every nodes (the white rectangles) are sharing the same abstract model using a group (the green circle) and those nodes are running some components (the black boxes) that can share messages using the connected channels (the orange circles).</p>
-
-<p><img src="/images/docs/model_overview.png" alt="Model overview in the Kevoree Web Editor" /></p>
-
-<p>At any point in time you can get such abstraction of a Kevoree system using the <a href="http://editor.kevoree.org">Kevoree Web Editor</a> and connecting to your own running system.</p>
+  <span class="n">kevs</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">script</span><span class="o">,</span> <span class="n">model</span><span class="o">);</span>
+  <span class="c1">// in Java, the KevScript engine mutates the given model directly</span>
+  <span class="k">assert</span> <span class="o">(</span><span class="n">model</span><span class="o">.</span><span class="na">getNodes</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"node"</span><span class="o">));</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">KevScriptException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// something went wrong while executing the script</span>
+  <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
       </div>
     </div>

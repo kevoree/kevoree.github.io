@@ -82,11 +82,34 @@
   </div>
 
   <div class="nav-section">
-    <h3>Advanced</h3>
+    <h3>KevScript</h3>
     <ul class="nav">
       
         <li>
-          <a href="/docs/advanced/kevscript.html">KevScript</a>
+          <a href="/docs/kevscript/introducing-kevscript.html">Introducing KevScript</a>
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/web-editor.html">In the Web editor</a>
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/java.html">In Java</a>
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/js.html">In JavaScript</a>
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Registry</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/registry/purpose.html">Purpose</a>
         </li>
       
     </ul>
@@ -98,6 +121,39 @@
 
       <div class="inner-content">
         <h2 id="helloworld-in-java">HelloWorld in Java</h2>
+<p>The sources of this example are available at <a href="https://github.com/kevoree/samples/tree/master/java/helloworld">github.com/kevoree/samples</a></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>git clone git@github.com:kevoree/samples.git
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<blockquote>
+  <p><i class="fa fa-lightbulb-o"></i>  In order to get started you need <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java 8+</a> and <a href="https://maven.apache.org/install.html">Maven</a></p>
+</blockquote>
+
+<p>Once you have cloned the project, you can install it locally:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="nb">cd </span>samples/java/helloworld
+./mvnw install
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<p>You are now ready to start your first Kevoree Java runtime:</p>
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>./mvnw kev:run
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<p>Now you should be able to see something like this in your console:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>Hello World!
+00:01 INFO: Model deployed successfully (468ms)
+00:01 INFO: Bootstrap succeed
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Code example of a Java component:</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
@@ -105,14 +161,34 @@
 5
 6
 7
-8</pre></td><td class="code"><pre><span class="nd">@ComponentType</span><span class="o">(</span><span class="n">version</span> <span class="o">=</span> <span class="mi">1</span><span class="o">,</span> <span class="n">description</span> <span class="o">=</span> <span class="s">"My Hello world component"</span><span class="o">)</span>
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td class="code"><pre><span class="cm">/**
+ *
+ * Created by leiko on 12/2/16.
+ */</span>
+<span class="nd">@ComponentType</span><span class="o">(</span><span class="n">version</span> <span class="o">=</span> <span class="mi">1</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
 
-  <span class="nd">@Start</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello world!"</span><span class="o">);</span>
-  <span class="o">}</span>
+    <span class="nd">@Start</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello World!"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Stop</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">stop</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Bye World!"</span><span class="o">);</span>
+    <span class="o">}</span>
 <span class="o">}</span>
+
 </pre></td></tr></tbody></table>
 </div>
 </div>
@@ -120,5 +196,7 @@
       </div>
     </div>
   </div>
+
+  
 </body>
 </html>
