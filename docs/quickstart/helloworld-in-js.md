@@ -37,6 +37,7 @@ const AbstractComponent = require('kevoree-entities/lib/AbstractComponent');
 
 const HelloWorld = AbstractComponent.extend({
   toString: 'HelloWorld',
+  tdef_version: 1,
 
   start(done) {
     console.log('Hello world!');

@@ -22,8 +22,14 @@
       title: In the Web editor
     - id: java
       title: In Java
+      subitems:
+        - id: java-service
+          title: Execute script in component
     - id: js
       title: In JavaScript
+      subitems:
+        - id: js-service
+          title: Execute script in component
 -
   id: registry
   title: Registry

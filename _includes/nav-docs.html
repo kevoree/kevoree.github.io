@@ -5,6 +5,15 @@
       {% for item in section.items %}
         <li>
           {{ item | sidebar_link: 'docs':section.id }}
+          {% if item.subitems %}
+            <ul class="nav">
+              {% for subitem in item.subitems %}
+                <li>
+                  {{ subitem | sidebar_link: 'docs':section.id }}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
