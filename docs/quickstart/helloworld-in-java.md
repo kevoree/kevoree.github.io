@@ -16,11 +16,11 @@ git clone git@github.com:kevoree/samples.git
 Once you have cloned the project, you can install it locally:
 ```sh
 cd samples/java/helloworld
-./mvnw install
+mvn install
 ```
 You are now ready to start your first Kevoree Java runtime:
 ```
-./mvnw kev:run
+mvn kev:run
 ```
 Now you should be able to see something like this in your console:
 ```text
