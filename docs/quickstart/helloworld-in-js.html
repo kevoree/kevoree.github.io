@@ -61,6 +61,7 @@
       
         <li>
           <a href="/docs/getting-started/what-is-kevoree.html">What is Kevoree?</a>
+          
         </li>
       
     </ul>
@@ -72,10 +73,12 @@
       
         <li>
           <a href="/docs/quickstart/helloworld-in-java.html">HelloWorld in Java</a>
+          
         </li>
       
         <li>
           <a href="/docs/quickstart/helloworld-in-js.html" class="active">HelloWorld in JavaScript</a>
+          
         </li>
       
     </ul>
@@ -87,18 +90,38 @@
       
         <li>
           <a href="/docs/kevscript/introducing-kevscript.html">Introducing KevScript</a>
+          
         </li>
       
         <li>
           <a href="/docs/kevscript/web-editor.html">In the Web editor</a>
+          
         </li>
       
         <li>
           <a href="/docs/kevscript/java.html">In Java</a>
+          
+            <ul class="nav">
+              
+                <li>
+                  <a href="/docs/kevscript/java-service.html">Execute script in component</a>
+                </li>
+              
+            </ul>
+          
         </li>
       
         <li>
           <a href="/docs/kevscript/js.html">In JavaScript</a>
+          
+            <ul class="nav">
+              
+                <li>
+                  <a href="/docs/kevscript/js-service.html">Execute script in component</a>
+                </li>
+              
+            </ul>
+          
         </li>
       
     </ul>
@@ -110,6 +133,7 @@
       
         <li>
           <a href="/docs/registry/purpose.html">Purpose</a>
+          
         </li>
       
     </ul>
@@ -166,10 +190,12 @@ npm i
 7
 8
 9
-10</pre></td><td class="code"><pre><span class="kr">const</span> <span class="nx">AbstractComponent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kevoree-entities/lib/AbstractComponent'</span><span class="p">);</span>
+10
+11</pre></td><td class="code"><pre><span class="kr">const</span> <span class="nx">AbstractComponent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kevoree-entities/lib/AbstractComponent'</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">HelloWorld</span> <span class="o">=</span> <span class="nx">AbstractComponent</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
   <span class="na">toString</span><span class="p">:</span> <span class="s1">'HelloWorld'</span><span class="p">,</span>
+  <span class="na">tdef_version</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
 
   <span class="nx">start</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>

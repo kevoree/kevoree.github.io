@@ -10205,6 +10205,7 @@ button.close {
   width: 210px;
   min-width: 210px;
   margin: 15px 10px 0 0;
+  border-right: 1px solid #ccc;
 }
 .sidenav .nav li {
   padding-left: 5px;
@@ -10218,11 +10219,20 @@ button.close {
 .sidenav .nav li a.active {
   color: #d57129;
 }
+.sidenav .nav .nav li {
+  padding-left: 10px;
+}
+.sidenav .nav-section {
+  margin: 20px 0 10px 0;
+}
 .sidenav .nav-section h3 {
   text-transform: uppercase;
-  margin-top: 20px;
+  margin: 0 0 5px 0;
   font-size: 14px;
   font-weight: bold;
+}
+.sidenav .nav-section:first-child {
+  margin-top: 10px;
 }
 
 .highlight table {
