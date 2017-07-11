@@ -10204,7 +10204,7 @@ button.close {
   font-size: 14px;
   width: 210px;
   min-width: 210px;
-  margin: 15px 10px 0 0;
+  margin: 15px 20px 0 0;
   border-right: 1px solid #ccc;
 }
 .sidenav .nav li {
@@ -10227,7 +10227,7 @@ button.close {
 }
 .sidenav .nav-section h3 {
   text-transform: uppercase;
-  margin: 0 0 5px 0;
+  margin: 0 0 8px 0;
   font-size: 14px;
   font-weight: bold;
 }
