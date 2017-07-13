@@ -54,31 +54,113 @@
     <div class="content">
       <div class="sidenav">
       
-      
-  <div class="nav-section">
-    <h3>Download</h3>
-    <ul class="nav">
-      
-        <li>
-          <a href="/download/java-runtime.html">Java Runtime</a>
-        </li>
-      
-        <li>
-          <a href="/download/nodejs-runtime.html">NodeJS Runtime</a>
-        </li>
-      
-    </ul>
-  </div>
-
-
-      
       </div>
 
       <div class="inner-content">
         <h1 id="download">Download</h1>
 <p>Kevoree is available for different platforms.<br />
-We currently support <a href="java-runtime.html">Java</a> (8+) and <a href="nodejs-runtime.html">NodeJS</a> (6+)</p>
+We currently support <strong>Java</strong> (8+) and <strong>NodeJS</strong> (6+), but also <a href="http://run.kevoree.org">Web browsers</a></p>
 
+        <ul class="nav nav-tabs" role="tablist">
+          
+          <li role="presentation" class="active">
+            <a href="#java" role="tab" data-toggle="tab">Java</a>
+          </li>
+          
+          <li role="presentation">
+            <a href="#js" role="tab" data-toggle="tab">JavaScript</a>
+          </li>
+          
+        </ul>
+
+        <div class="tab-content">
+          
+          <div class="tab-pane active" id="java">
+            
+            <h3 id="stable-cli">Stable CLI</h3>
+<p><a href="https://github.com/kevoree/kevoree"><img src="https://img.shields.io/maven-central/v/org.kevoree/org.kevoree.tools.runtime.svg" alt="Maven Central" /></a></p>
+
+<p>The <strong>stable</strong> runtime is available <a href="https://goo.gl/s7NBZg">here</a></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>wget https://goo.gl/s7NBZg
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="latest-cli">Latest CLI</h3>
+<p>The <strong>latest</strong> (unstable) runtime is available <a href="https://goo.gl/F5uv4T">here</a></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>wget https://goo.gl/F5uv4T
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+          </div>
+          
+          <div class="tab-pane" id="js">
+            
+            <h3 id="stable-cli">Stable CLI</h3>
+<p><a href="https://github.com/kevoree/kevoree-js-cli"><img src="https://img.shields.io/npm/v/kevoree-cli.svg" alt="npm" /></a>
+<a href="https://www.npmjs.com/package/kevoree-cli"><img src="https://img.shields.io/npm/dt/kevoree-cli.svg" alt="npm" /></a></p>
+
+<p>The easiest way to get started with Kevoree in JavaScript is to use <code class="highlighter-rouge">npm</code> or <code class="highlighter-rouge">yarn</code> to install the CLI globally:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>npm i -g kevoree-cli
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>This will give you access to the command-line:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td class="code"><pre>$ kevoree -h
+
+  Usage: kevoree [options] [command]
+
+
+  Commands:
+
+    clean       Delete installed modules out of the cache folder
+    init        Initialize Kevoree's config file
+    create      Generate a new Kevoree project
+    login       Save your Kevoree registry credentials
+    start       Start a Kevoree Javascript runtime
+    config      Prints the current Kevoree config file
+    help [cmd]  display help for [cmd]
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="latest-cli">Latest CLI</h3>
+<p><a href="https://github.com/kevoree/kevoree-js-cli"><img src="https://img.shields.io/npm/v/kevoree-cli/next.svg" alt="npm" /></a>
+<a href="https://www.npmjs.com/package/kevoree-cli"><img src="https://img.shields.io/npm/dt/kevoree-cli/next.svg" alt="npm" /></a></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>npm i -g kevoree-cli@next
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+          </div>
+          
+        </div>
       </div>
     </div>
   </div>

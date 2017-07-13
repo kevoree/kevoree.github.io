@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <title>Kevoree - Docs | KevScript | In JavaScript</title>
+   <title>Kevoree - Docs | KevScript | Standalone usage</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
@@ -64,6 +64,11 @@
           
         </li>
       
+        <li>
+          <a href="/docs/getting-started/installation.html">Installation</a>
+          
+        </li>
+      
     </ul>
   </div>
 
@@ -72,12 +77,7 @@
     <ul class="nav">
       
         <li>
-          <a href="/docs/quickstart/helloworld-in-java.html">HelloWorld in Java</a>
-          
-        </li>
-      
-        <li>
-          <a href="/docs/quickstart/helloworld-in-js.html">HelloWorld in JavaScript</a>
+          <a href="/docs/quickstart/helloworld.html">HelloWorld</a>
           
         </li>
       
@@ -99,28 +99,12 @@
         </li>
       
         <li>
-          <a href="/docs/kevscript/java.html">In Java</a>
-          
-            <ul class="nav">
-              
-                <li>
-                  <a href="/docs/kevscript/java-service.html">Execute script in component</a>
-                </li>
-              
-            </ul>
+          <a href="/docs/kevscript/standalone-usage.html" class="active">Standalone usage</a>
           
         </li>
       
         <li>
-          <a href="/docs/kevscript/js.html" class="active">In JavaScript</a>
-          
-            <ul class="nav">
-              
-                <li>
-                  <a href="/docs/kevscript/js-service.html">Execute script in component</a>
-                </li>
-              
-            </ul>
+          <a href="/docs/kevscript/execute-script-in-component.html">Execute script in component</a>
           
         </li>
       
@@ -144,9 +128,75 @@
       </div>
 
       <div class="inner-content">
-        <h2 id="kevscript-in-javascript">KevScript in JavaScript</h2>
+        <h2 id="standalone-usage">Standalone usage</h2>
 
-<h3 id="npm-module">NPM module</h3>
+        <ul class="nav nav-tabs" role="tablist">
+          
+          <li role="presentation" class="active">
+            <a href="#java" role="tab" data-toggle="tab">Java</a>
+          </li>
+          
+          <li role="presentation">
+            <a href="#js" role="tab" data-toggle="tab">JavaScript</a>
+          </li>
+          
+        </ul>
+
+        <div class="tab-content">
+          
+          <div class="tab-pane active" id="java">
+            
+            <h3 id="maven-artifact">Maven Artifact</h3>
+<div class="language-xml highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.kevoree<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>org.kevoree.tools.kevscript<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>${kevoree.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="usage-example">Usage example</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="n">KevScriptEngine</span> <span class="n">kevs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">KevScriptEngine</span><span class="o">(</span><span class="s">"https://new-registry.kevoree.org"</span><span class="o">);</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="n">String</span> <span class="n">script</span> <span class="o">=</span> <span class="s">"add node: JavaNode/LATEST/LATEST"</span><span class="o">;</span>
+  <span class="kd">final</span> <span class="n">KevoreeFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultKevoreeFactory</span><span class="o">();</span> <span class="c1">// a factory to create models</span>
+  <span class="kd">final</span> <span class="n">ContainerRoot</span> <span class="n">model</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">createContainerRoot</span><span class="o">();</span> <span class="c1">// create an empty model</span>
+  <span class="n">factory</span><span class="o">.</span><span class="na">root</span><span class="o">(</span><span class="n">model</span><span class="o">);</span> <span class="c1">// ignore this but make sure you do it :p</span>
+
+  <span class="n">kevs</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">script</span><span class="o">,</span> <span class="n">model</span><span class="o">);</span>
+  <span class="c1">// in Java, the KevScript engine mutates the given model directly</span>
+  <span class="k">assert</span> <span class="o">(</span><span class="n">model</span><span class="o">.</span><span class="na">getNodes</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"node"</span><span class="o">));</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">KevScriptException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// something went wrong while executing the script</span>
+  <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+          </div>
+          
+          <div class="tab-pane" id="js">
+            
+            <h3 id="npm-module">NPM module</h3>
 <div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>npm i kevoree-kevscript -S
 </pre></td></tr></tbody></table>
 </div>
@@ -205,6 +255,9 @@
 </div>
 </div>
 
+          </div>
+          
+        </div>
       </div>
     </div>
   </div>

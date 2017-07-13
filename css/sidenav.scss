@@ -9,12 +9,12 @@
 
   .nav {
     li {
-      padding-left: 5px;
+      padding-right: 5px;
       a {
-        padding: 0;
+        padding: 0 5px;
       }
       a:hover {
-        background-color: inherit;
+        background-color: #eee;
       }
     }
 
@@ -22,7 +22,7 @@
       color: $k-channel-color;
     }
 
-    .nav li {
+    .nav li a {
       padding-left: 10px;
     }
   }

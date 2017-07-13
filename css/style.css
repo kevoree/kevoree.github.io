@@ -10208,18 +10208,18 @@ button.close {
   border-right: 1px solid #ccc;
 }
 .sidenav .nav li {
-  padding-left: 5px;
+  padding-right: 5px;
 }
 .sidenav .nav li a {
-  padding: 0;
+  padding: 0 5px;
 }
 .sidenav .nav li a:hover {
-  background-color: inherit;
+  background-color: #eee;
 }
 .sidenav .nav li a.active {
   color: #d57129;
 }
-.sidenav .nav .nav li {
+.sidenav .nav .nav li a {
   padding-left: 10px;
 }
 .sidenav .nav-section {
@@ -10257,29 +10257,29 @@ button.close {
 .highlight table tr {
   display: flex;
 }
-.highlight table td.code {
+.highlight table .code {
   display: inline-block;
   flex: 1;
 }
-.highlight table td.code pre {
+.highlight table .code pre {
   padding: 5px 5px 5px 8px;
 }
-.highlight table td.code pre .k {
+.highlight table .code pre .k {
   color: #e06c75;
 }
-.highlight table td.code pre .kr {
+.highlight table .code pre .kr {
   color: #c678dd;
 }
-.highlight table td.code pre .kc {
+.highlight table .code pre .kc {
   color: #d19a66;
 }
-.highlight table td.code pre .mi {
+.highlight table .code pre .mi {
   color: #d19a66;
 }
-.highlight table td.code pre .s1 {
+.highlight table .code pre .s1 {
   color: #98c379;
 }
-.highlight table td.code pre .nb {
+.highlight table .code pre .nb {
   color: #56b6c2;
 }
 
@@ -10352,10 +10352,27 @@ a:hover {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #eee;
 }
-.container .content .inner-content img {
+.container .content .inner-content img[src^="/"] {
   align-self: center;
   box-shadow: 3px 3px 10px #333;
 }
 .container .content .inner-content .post {
   padding-bottom: 35px;
+}
+.container .content .inner-content .nav.nav-tabs li.active a {
+  background-color: #f59149;
+  color: #fff;
+}
+.container .content .inner-content .tab-content .tab-pane h1:first-child,
+.container .content .inner-content .tab-content .tab-pane h2:first-child,
+.container .content .inner-content .tab-content .tab-pane h3:first-child,
+.container .content .inner-content .tab-content .tab-pane h4:first-child,
+.container .content .inner-content .tab-content .tab-pane h5:first-child,
+.container .content .inner-content .tab-content .tab-pane h6:first-child {
+  margin-top: 0;
+}
+.container .content .inner-content .tab-content .tab-pane.active {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 8px;
 }
