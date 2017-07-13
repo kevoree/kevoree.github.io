@@ -1,0 +1,39 @@
+{% include top.html %}
+<body>
+  {% include navbar.html %}
+
+  <div class="container">
+    <div class="content">
+      <div class="sidenav">
+      {% if page.sidenav %}
+      {% include {{ page.sidenav }} %}
+      {% endif %}
+      </div>
+
+      <div class="inner-content">
+        {{ content | markdownify }}
+        <ul class="nav nav-tabs" role="tablist">
+          {% for tab in page.tabs %}
+          <li role="presentation"{% if forloop.first %} class="active"{% endif %}>
+            <a href="#{{tab.id}}" role="tab" data-toggle="tab">{{tab.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="tab-content">
+          {% for tab in page.tabs %}
+          <div class="tab-pane{% if forloop.first %} active{% endif %}" id="{{tab.id}}">
+            {% capture tabContent %}
+              {% include_relative {{ page.id | append: '/' | append: tab.id | append: '.md' }} %}
+            {% endcapture %}
+            {{ tabContent | strip | markdownify }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+</body>
+</html>

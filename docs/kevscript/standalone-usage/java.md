@@ -1,12 +1,3 @@
----
-id: java
-layout: page
-title: Docs | KevScript | In Java
-section: docs
-sidenav: nav-docs.html
----
-## KevScript in Java
-
 ### Maven Artifact
 ```xml
 <dependency>

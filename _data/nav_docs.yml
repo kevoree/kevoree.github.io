@@ -4,14 +4,14 @@
   items:
     - id: what-is-kevoree
       title: What is Kevoree?
+    - id: installation
+      title: Installation
 -
   id: quickstart
   title: Quick Start
   items:
-    - id: helloworld-in-java
-      title: HelloWorld in Java
-    - id: helloworld-in-js
-      title: HelloWorld in JavaScript
+    - id: helloworld
+      title: HelloWorld
 -
   id: kevscript
   title: KevScript
@@ -20,16 +20,10 @@
       title: Introducing KevScript
     - id: web-editor
       title: In the Web editor
-    - id: java
-      title: In Java
-      subitems:
-        - id: java-service
-          title: Execute script in component
-    - id: js
-      title: In JavaScript
-      subitems:
-        - id: js-service
-          title: Execute script in component
+    - id: standalone-usage
+      title: Standalone usage
+    - id: execute-script-in-component
+      title: Execute script in component
 -
   id: registry
   title: Registry

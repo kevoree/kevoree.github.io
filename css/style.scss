@@ -83,13 +83,40 @@ a:hover {
         border-bottom: 1px solid #eee;
       }
 
-      img {
+      img[src^="/"] {
         align-self: center;
         box-shadow: 3px 3px 10px #333;
       }
 
       .post {
         padding-bottom: 35px;
+      }
+
+      .nav.nav-tabs {
+        li.active {
+          a {
+            background-color: #f59149;
+            color: #fff;
+          }
+        }
+      }
+
+      .tab-content {
+        .tab-pane {
+          h1:first-child,
+          h2:first-child,
+          h3:first-child,
+          h4:first-child,
+          h5:first-child,
+          h6:first-child {
+            margin-top: 0;
+          }
+        }
+        .tab-pane.active {
+          border: 1px solid #ddd;
+          border-top: none;
+          padding: 8px;
+        }
       }
     }
   }

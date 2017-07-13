@@ -1,11 +1,3 @@
----
-id: helloworld-in-java
-layout: page
-title: Docs | QuickStart | HelloWorld in Java
-section: docs
-sidenav: nav-docs.html
----
-## HelloWorld in Java
 The sources of this example are available at [github.com/kevoree/samples](https://github.com/kevoree/samples/tree/master/java/helloworld)
 ```sh
 git clone git@github.com:kevoree/samples.git

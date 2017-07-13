@@ -1,12 +1,3 @@
----
-id: java-service
-layout: page
-title: Docs | KevScript | Service in Java
-section: docs
-sidenav: nav-docs.html
----
-## Execute KevScript within a component in Java
-
 ### Directly trigger adaptations
 This component will send each received messages to the core **ModelService** as KevScript.  
 This will have the effect of modifying the abstraction layer and so the running system.

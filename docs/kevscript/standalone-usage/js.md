@@ -1,12 +1,3 @@
----
-id: js
-layout: page
-title: Docs | KevScript | In JavaScript
-section: docs
-sidenav: nav-docs.html
----
-## KevScript in JavaScript
-
 ### NPM module
 ```sh
 npm i kevoree-kevscript -S

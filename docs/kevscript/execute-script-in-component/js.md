@@ -1,12 +1,3 @@
----
-id: js-service
-layout: page
-title: Docs | KevScript | Service in JavaScript
-section: docs
-sidenav: nav-docs.html
----
-## Execute KevScript within a component in JavaScript
-
 ### Directly trigger adaptations
 This component will send each received messages to the core **ModelService** as KevScript.  
 This will have the effect of modifying the abstraction layer and so the running system.

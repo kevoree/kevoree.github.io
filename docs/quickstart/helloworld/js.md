@@ -1,11 +1,3 @@
----
-id: helloworld-in-js
-layout: page
-title: Docs | QuickStart | HelloWorld in JavaScript
-section: docs
-sidenav: nav-docs.html
----
-## HelloWorld in JavaScript
 The sources of this example are available at [github.com/kevoree/samples](https://github.com/kevoree/samples/tree/master/js/helloworld)
 ```sh
 git clone git@github.com:kevoree/samples.git
@@ -31,7 +23,7 @@ Now you should be able to see something like this in your console:
 17:30:17 Core            Model deployed successfully: 5 adaptations (119ms)
 ```
 
-Code example of a JavaScript component:
+The HelloWorld component is just printing "Hello world!" when the component starts, and "Bye world!" when it stops:
 ```js
 const AbstractComponent = require('kevoree-entities/lib/AbstractComponent');
 
@@ -40,7 +32,12 @@ const HelloWorld = AbstractComponent.extend({
   tdef_version: 1,
 
   start(done) {
-    console.log('Hello world!');
+    this.log.info('Hello world!');
+    done();
+  },
+
+  stop(done) {
+    this.log.info('Bye world!');
     done();
   }
 });

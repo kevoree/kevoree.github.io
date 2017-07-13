@@ -1,9 +1,14 @@
 ---
-layout: page
+id: download
+layout: tabbed
 title: Download
 section: download
-sidenav: nav-download.html
+tabs:
+  - id: java
+    title: Java
+  - id: js
+    title: JavaScript
 ---
 # Download
 Kevoree is available for different platforms.  
-We currently support [Java](java-runtime.html) (8+) and [NodeJS](nodejs-runtime.html) (6+)
+We currently support **Java** (8+) and **NodeJS** (6+), but also [Web browsers](http://run.kevoree.org)
