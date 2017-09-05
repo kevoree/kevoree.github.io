@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Kevoree - Download</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/cm-mode-kevscript@1.0.2/src/theme/kevscript.css">
+   <link rel="stylesheet" type="text/css" href="/css/style.css" >
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/mode.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/lint.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+   <script src="/js/main.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/images/kevoree.png" alt="Kevoree logo" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog/blog.html">Blog</a></li>
+        <li><a href="/docs/getting-started/what-is-kevoree.html">Docs</a></li>
+        <li><a href="/download/download.html" class="active">Download</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://twitter.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="sidenav">
+      
+      </div>
+
+      <div class="inner-content">
+        <h1 id="download">Download</h1>
+<p>Kevoree is available for different platforms.<br />
+We currently support <strong>Java</strong> (8+) and <strong>NodeJS</strong> (6+), but also <a href="http://run.kevoree.org">Web browsers</a></p>
+
+        <ul class="nav nav-tabs" role="tablist">
+          
+          <li role="presentation" class="active">
+            <a href="#java" role="tab" data-toggle="tab">Java</a>
+          </li>
+          
+          <li role="presentation">
+            <a href="#js" role="tab" data-toggle="tab">JavaScript</a>
+          </li>
+          
+        </ul>
+
+        <div class="tab-content">
+          
+          <div class="tab-pane active" id="java">
+            
+            <h3 id="stable-cli">Stable CLI</h3>
+<p><a href="http://search.maven.org/#search|ga|1|g:&quot;org.kevoree&quot;%20AND%20a:&quot;org.kevoree.tools.runtime&quot;"><img src="https://img.shields.io/maven-central/v/org.kevoree/org.kevoree.tools.runtime.svg" alt="Maven Central" /></a></p>
+
+<p>The <strong>stable</strong> runtime is available <a href="https://goo.gl/s7NBZg">here</a></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>wget https://goo.gl/s7NBZg
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="latest-cli">Latest CLI</h3>
+<p><a href="https://oss.sonatype.org/content/groups/public/org/kevoree/org.kevoree.tools.runtime"><img src="https://img.shields.io/badge/oss.sonatype.org-SNAPSHOT-orange.svg" alt="OSSRH" /></a>
+The <strong>latest</strong> (unstable) runtime is available <a href="https://goo.gl/F5uv4T">here</a></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>wget https://goo.gl/F5uv4T
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+          </div>
+          
+          <div class="tab-pane" id="js">
+            
+            <h3 id="stable-cli">Stable CLI</h3>
+<p><a href="https://github.com/kevoree/kevoree-js-cli"><img src="https://img.shields.io/npm/v/kevoree-cli.svg" alt="npm" /></a>
+<a href="https://www.npmjs.com/package/kevoree-cli"><img src="https://img.shields.io/npm/dt/kevoree-cli.svg" alt="npm" /></a></p>
+
+<p>The easiest way to get started with Kevoree in JavaScript is to use <code class="highlighter-rouge">npm</code> or <code class="highlighter-rouge">yarn</code> to install the CLI globally:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>npm i -g kevoree-cli
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>This will give you access to the command-line:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td class="code"><pre>$ kevoree -h
+
+  Usage: kevoree [options] [command]
+
+
+  Commands:
+
+    clean       Delete installed modules out of the cache folder
+    init        Initialize Kevoree's config file
+    create      Generate a new Kevoree project
+    login       Save your Kevoree registry credentials
+    start       Start a Kevoree Javascript runtime
+    config      Prints the current Kevoree config file
+    help [cmd]  display help for [cmd]
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="latest-cli">Latest CLI</h3>
+<p><a href="https://github.com/kevoree/kevoree-js-cli"><img src="https://img.shields.io/npm/v/kevoree-cli/next.svg" alt="npm" /></a>
+<a href="https://www.npmjs.com/package/kevoree-cli"><img src="https://img.shields.io/npm/dt/kevoree-cli/next.svg" alt="npm" /></a></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>npm i -g kevoree-cli@next
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

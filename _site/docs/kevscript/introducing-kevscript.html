@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Kevoree - Docs | KevScript | Introducing KevScript</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/cm-mode-kevscript@1.0.2/src/theme/kevscript.css">
+   <link rel="stylesheet" type="text/css" href="/css/style.css" >
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/mode.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/lint.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+   <script src="/js/main.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/images/kevoree.png" alt="Kevoree logo" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog/blog.html">Blog</a></li>
+        <li><a href="/docs/getting-started/what-is-kevoree.html" class="active">Docs</a></li>
+        <li><a href="/download/download.html">Download</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://twitter.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="sidenav">
+      
+      
+  <div class="nav-section">
+    <h3>Getting started</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/getting-started/what-is-kevoree.html">What is Kevoree?</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/getting-started/installation.html">Installation</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Quick Start</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/quickstart/helloworld.html">HelloWorld</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/quickstart/lifecycle.html">Lifecycle</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>KevScript</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/kevscript/introducing-kevscript.html" class="active">Introducing KevScript</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/web-editor.html">In the Web editor</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/standalone-usage.html">Standalone usage</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/execute-script-in-component.html">Execute script in component</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Registry</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/registry/purpose.html">Purpose</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+
+      
+      </div>
+
+      <div class="inner-content">
+        <h2 id="kevoree-script-aka-kevscript">Kevoree Script aka KevScript</h2>
+<p>KevScript is a scripting language to manipulate models. <strong>It is not a general purpose language.</strong></p>
+
+<p>A KevScript engine will take a script and a model as inputs, and return a new model modified according to the script.</p>
+<blockquote>
+  <p>A KevScript engine in short is:<br />
+<code class="highlighter-rouge">(kevscript, inModel) =&gt; outModel</code></p>
+</blockquote>
+
+<h3 id="overview">Overview</h3>
+<p>Here is an example of a basic KevScript:</p>
+<textarea class="kevscript">add node0: JavascriptNode
+add node0.ticker: Ticker
+add node1: JavaNode
+add node1.printer: ConsolePrinter
+add sync: WSGroup
+add chan: RemoteWSChan
+
+attach node0, node1 sync
+
+bind node0.ticker.tick chan
+bind node1.printer.input chan
+
+set sync.master = "node0"
+set chan.uuid = "eW9sb3N3YWc="
+set chan.host = "ws.kevoree.org"
+
+network node0.ip.lo 127.0.0.1</textarea>
+
+<p>Using this KevScript as an input to the engine, and an empty model as context
+model, the output will look like this in the <a href="http://editor.kevoree.org">Kevoree Web Editor</a>:</p>
+
+<p><img src="/images/docs/model_overview.png" alt="KevScript overview" /></p>
+
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

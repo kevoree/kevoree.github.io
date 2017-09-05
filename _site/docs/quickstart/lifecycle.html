@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Kevoree - Docs | QuickStart | Lifecycle</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/cm-mode-kevscript@1.0.2/src/theme/kevscript.css">
+   <link rel="stylesheet" type="text/css" href="/css/style.css" >
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/mode.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/lint.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+   <script src="/js/main.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/images/kevoree.png" alt="Kevoree logo" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog/blog.html">Blog</a></li>
+        <li><a href="/docs/getting-started/what-is-kevoree.html" class="active">Docs</a></li>
+        <li><a href="/download/download.html">Download</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://twitter.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="sidenav">
+      
+      
+  <div class="nav-section">
+    <h3>Getting started</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/getting-started/what-is-kevoree.html">What is Kevoree?</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/getting-started/installation.html">Installation</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Quick Start</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/quickstart/helloworld.html">HelloWorld</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/quickstart/lifecycle.html" class="active">Lifecycle</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>KevScript</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/kevscript/introducing-kevscript.html">Introducing KevScript</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/web-editor.html">In the Web editor</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/standalone-usage.html">Standalone usage</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/execute-script-in-component.html">Execute script in component</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Registry</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/registry/purpose.html">Purpose</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+
+      
+      </div>
+
+      <div class="inner-content">
+        <h2 id="lifecycle">Lifecycle</h2>
+<p>Kevoree provides a way for developers to manage their instances lifecycle using hooks.<br />
+There are 3 different hooks available: <strong>start</strong>, <strong>update</strong> and <strong>stop</strong>.</p>
+
+        <ul class="nav nav-tabs" role="tablist">
+          
+          <li role="presentation" class="active">
+            <a href="#java" role="tab" data-toggle="tab">Java</a>
+          </li>
+          
+          <li role="presentation">
+            <a href="#js" role="tab" data-toggle="tab">JavaScript</a>
+          </li>
+          
+        </ul>
+
+        <div class="tab-content">
+          
+          <div class="tab-pane active" id="java">
+            
+            <div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td class="code"><pre><span class="nd">@ComponentType</span><span class="o">(</span><span class="n">version</span> <span class="o">=</span> <span class="mi">1</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+
+    <span class="nd">@Start</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello World!"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Update</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"My world is changing"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Stop</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">stop</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Bye World!"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+          </div>
+          
+          <div class="tab-pane" id="js">
+            
+            <div class="language-js highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="kr">const</span> <span class="nx">AbstractComponent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kevoree-entities/lib/AbstractComponent'</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">HelloWorld</span> <span class="o">=</span> <span class="nx">AbstractComponent</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="na">toString</span><span class="p">:</span> <span class="s1">'HelloWorld'</span><span class="p">,</span>
+  <span class="na">tdef_version</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+
+  <span class="nx">start</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>
+    <span class="nx">done</span><span class="p">();</span>
+  <span class="p">},</span>
+
+  <span class="nx">update</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'My world is changing'</span><span class="p">);</span>
+    <span class="nx">done</span><span class="p">();</span>
+  <span class="p">},</span>
+
+  <span class="nx">stop</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'Bye world!'</span><span class="p">);</span>
+    <span class="nx">done</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

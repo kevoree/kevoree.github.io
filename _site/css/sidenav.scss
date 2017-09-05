@@ -1,0 +1,44 @@
+@import 'colors';
+
+.sidenav {
+  font-size: 14px;
+  width: 210px;
+  min-width: 210px;
+  margin: 15px 20px 0 0;
+  border-right: 1px solid #ccc;
+
+  .nav {
+    li {
+      padding-right: 5px;
+      a {
+        padding: 0 5px;
+      }
+      a:hover {
+        background-color: #eee;
+      }
+    }
+
+    li a.active {
+      color: $k-channel-color;
+    }
+
+    .nav li a {
+      padding-left: 10px;
+    }
+  }
+
+  .nav-section {
+    margin: 20px 0 10px 0;
+
+    h3 {
+      text-transform: uppercase;
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  .nav-section:first-child {
+    margin-top: 10px;
+  }
+}

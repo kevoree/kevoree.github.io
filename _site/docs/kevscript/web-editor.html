@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Kevoree - Docs | KevScript | Web Editor</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/cm-mode-kevscript@1.0.2/src/theme/kevscript.css">
+   <link rel="stylesheet" type="text/css" href="/css/style.css" >
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/mode.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/addon/lint/lint.min.js"></script>
+   <script src="https://unpkg.com/cm-mode-kevscript@1.0.2/dist/lint.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+   <script src="/js/main.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/images/kevoree.png" alt="Kevoree logo" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog/blog.html">Blog</a></li>
+        <li><a href="/docs/getting-started/what-is-kevoree.html" class="active">Docs</a></li>
+        <li><a href="/download/download.html">Download</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://twitter.com/kevoree" target="_blank" class="nav-icon"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="sidenav">
+      
+      
+  <div class="nav-section">
+    <h3>Getting started</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/getting-started/what-is-kevoree.html">What is Kevoree?</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/getting-started/installation.html">Installation</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Quick Start</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/quickstart/helloworld.html">HelloWorld</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/quickstart/lifecycle.html">Lifecycle</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>KevScript</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/kevscript/introducing-kevscript.html">Introducing KevScript</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/web-editor.html" class="active">In the Web editor</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/standalone-usage.html">Standalone usage</a>
+          
+        </li>
+      
+        <li>
+          <a href="/docs/kevscript/execute-script-in-component.html">Execute script in component</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="nav-section">
+    <h3>Registry</h3>
+    <ul class="nav">
+      
+        <li>
+          <a href="/docs/registry/purpose.html">Purpose</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+
+      
+      </div>
+
+      <div class="inner-content">
+        <h2 id="kevscript-in-the-web-editor">KevScript in the Web editor</h2>
+<p>In the <a href="http://editor.kevoree.org/#/kevscript">Kevoree Web Editor</a> you can execute KevScript files directly from your browser.</p>
+
+<blockquote>
+  <p><a href="http://editor.kevoree.org/#/kevscript" target="\_blank">Execute</a> your KevScript directly from your browser!</p>
+</blockquote>
+
+<p><img src="/images/docs/kevscript/hint.png" alt="WebEditor KevScript engine with auto-complete" /></p>
+
+<p>The KevScript engine in the Web editor is based on the NodeJS module <a href="https://github.com/kevoree/kevoree-js-kevscript">kevoree-kevscript</a> and is bundled as a <a href="https://codemirror.net/">CodeMirror</a> mode available <a href="https://github.com/kevoree/cm-kevscript">here</a>.</p>
+
+<h3 id="kevoree-registry-setting">Kevoree Registry setting</h3>
+<p>Every KevScript engine needs to be able to access a <a href="/docs/registry/purpose.html">Kevoree Registry</a> somewhere in order to resolve the <strong>TypeDefinitions</strong> and there <strong>DeployUnits</strong>.<br />
+To specify a registry other than the official <code class="highlighter-rouge">https://registry.kevoree.org</code>, you can go to the <code class="highlighter-rouge">/#/settings</code> page of the Web editor <a href="http://editor.kevoree.org/#/settings">here</a> and modify the <strong>Kevoree Registry</strong> input field.</p>
+
+<p><img src="/images/docs/kevscript/registry_url.png" alt="WebEditor Registry url setting" /></p>
+
+<h3 id="auto-complete-feature">Auto-complete feature</h3>
+<p>The editor comes with an auto-complete feature available using <code class="highlighter-rouge">Ctrl-Space</code> depending on the current cursor position.<br />
+It also executes the script <em>as-you-type</em> giving you success/error/warning feedbacks directly on the screen.</p>
+
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
