@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/zsh
 rm -rf _site
 git clone -b master `git config remote.origin.url` _site
-jekyll build
+docker run -v $PWD:/srv/jekyll --rm -it jekyll/jekyll jekyll build
 cd _site
 echo "kevoree.org" > CNAME
 git add .
-gca -m "New release"
-gp
+git commit -am "New release"
+git push
 cd ..
