@@ -8,19 +8,19 @@ npm i kevoree-kevscript -S
 ```js
 const config = require('tiny-conf');
 const KevScript = require('kevoree-kevscript');
-const Logger = require('kevoree-commons/lib/Logger');
+const loggerFactory = require('kevoree-logger');
 const assert = require('assert');
 
 // kevoree-kevscript uses tiny-conf under the hood to retrieve
 // its registry settings, so we have to define them before instantiation
 config.set('registry', {
-  host: 'new-registry.kevoree.org',
+  host: 'registry.kevoree.org',
   port: 443,
   ssl: true
 });
 
-const kevs = new KevScript(new Logger('KevScript'));
-const script = 'add node: JavascriptNode/LATEST/LATEST';
+const kevs = new KevScript(loggerFactory.create('KevScript'));
+const script = 'add node: JavascriptNode';
 
 kevs.parse(script, (err, model) => {
   if (err) {

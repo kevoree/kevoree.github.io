@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Work in progress
-date:   2017-06-30 09:16:41 -0500
+date:   2017-06-30 09:16:41 +0200
 section: blog
 categories: blog
 author:

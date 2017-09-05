@@ -12,6 +12,8 @@
   items:
     - id: helloworld
       title: HelloWorld
+    - id: lifecycle
+      title: Lifecycle
 -
   id: kevscript
   title: KevScript
