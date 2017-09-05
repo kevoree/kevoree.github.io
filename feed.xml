@@ -1,5 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://kevoree.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://kevoree.org/" rel="alternate" type="text/html" /><updated>2017-07-13T11:11:17-05:00</updated><id>http://kevoree.org/</id><title type="html">Kevoree</title><subtitle>Model@runtime approach for distributed and reconfigurable systems
-</subtitle><entry><title type="html">Work in progress</title><link href="http://kevoree.org/blog/2017/06/30/work-in-progress.html" rel="alternate" type="text/html" title="Work in progress" /><published>2017-06-30T09:16:41-05:00</published><updated>2017-06-30T09:16:41-05:00</updated><id>http://kevoree.org/blog/2017/06/30/work-in-progress</id><content type="html" xml:base="http://kevoree.org/blog/2017/06/30/work-in-progress.html">&lt;p&gt;Please be aware that this site is a work in progress currently.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://kevoree.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://kevoree.org/" rel="alternate" type="text/html" /><updated>2017-09-05T04:58:13-05:00</updated><id>http://kevoree.org/</id><title type="html">Kevoree</title><subtitle>Model@runtime approach for distributed and reconfigurable systems
+</subtitle><entry><title type="html">A new release is out</title><link href="http://kevoree.org/blog/2017/09/05/a-new-release-is-out.html" rel="alternate" type="text/html" title="A new release is out" /><published>2017-09-05T03:48:00-05:00</published><updated>2017-09-05T03:48:00-05:00</updated><id>http://kevoree.org/blog/2017/09/05/a-new-release-is-out</id><content type="html" xml:base="http://kevoree.org/blog/2017/09/05/a-new-release-is-out.html">&lt;p&gt;We have just released &lt;strong&gt;new stable versions&lt;/strong&gt; of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Java&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeJS&lt;/code&gt; platforms:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Java&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;v5.5.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NodeJS&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;v6.1.7&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We are aware of the misleading difference between the two platforms major versions and we will most definitely make those converge in a near future (at least for the CLIs)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Those new versions are the output of 3 years of incremental development with the feedbacks received from the &lt;a href=&quot;http://heads-project.eu/&quot;&gt;HEADS&lt;/a&gt; consortium.&lt;/p&gt;
+
+&lt;h4 id=&quot;overall-changes&quot;&gt;Overall changes:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;publishing on a Kevoree registry is now pre-checked to prevent erroneous publication of models&lt;/li&gt;
+  &lt;li&gt;improved logging experience&lt;/li&gt;
+  &lt;li&gt;shared user config in &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.kevoree/config.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;main-changes-for-java&quot;&gt;Main changes for Java:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;instances classloader are now using a &lt;code class=&quot;highlighter-rouge&quot;&gt;URLClassLoader&lt;/code&gt; approach, which is supposed to reflect the default behavior intended by 3rd-party libraries users&lt;/li&gt;
+  &lt;li&gt;runtime errors/exceptions are now understandable with a clean stack bubbling all the way up to the core&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;main-changes-for-nodejs&quot;&gt;Main changes for NodeJS:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;improved error handling (Promises instead of callbacks &lt;a href=&quot;/docs/quickstart/lifecycle.html&quot;&gt;except for instances lifecycle hooks&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;development tooling is now packed in a &lt;code class=&quot;highlighter-rouge&quot;&gt;kevoree-scripts&lt;/code&gt; module to clarify projects for new-comers&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>leiko</name></author><summary type="html">We have just released new stable versions of the Java and NodeJS platforms: Java v5.5.0 NodeJS v6.1.7</summary></entry><entry><title type="html">Work in progress</title><link href="http://kevoree.org/blog/2017/06/30/work-in-progress.html" rel="alternate" type="text/html" title="Work in progress" /><published>2017-06-30T02:16:41-05:00</published><updated>2017-06-30T02:16:41-05:00</updated><id>http://kevoree.org/blog/2017/06/30/work-in-progress</id><content type="html" xml:base="http://kevoree.org/blog/2017/06/30/work-in-progress.html">&lt;p&gt;Please be aware that this site is a work in progress currently.&lt;br /&gt;
 You may find unfinished docs, articles.&lt;/p&gt;
 
-&lt;p&gt;Sorry for the inconvenience, don’t hesitate to visit the website again in a near future.&lt;/p&gt;</content><author><name>leiko</name></author><summary type="html">Please be aware that this site is a work in progress currently. You may find unfinished docs, articles.</summary></entry><entry><title type="html">Welcome to Kevoree!</title><link href="http://kevoree.org/blog/2017/06/30/welcome-to-kevoree.html" rel="alternate" type="text/html" title="Welcome to Kevoree!" /><published>2017-06-30T03:16:41-05:00</published><updated>2017-06-30T03:16:41-05:00</updated><id>http://kevoree.org/blog/2017/06/30/welcome-to-kevoree</id><content type="html" xml:base="http://kevoree.org/blog/2017/06/30/welcome-to-kevoree.html">&lt;p&gt;Brace yourself, &lt;a href=&quot;https://kevoree.org&quot;&gt;kevoree.org&lt;/a&gt; is back with a brand new design.&lt;/p&gt;</content><author><name>leiko</name></author><summary type="html">Brace yourself, kevoree.org is back with a brand new design.</summary></entry></feed>
+&lt;p&gt;Sorry for the inconvenience, don’t hesitate to visit the website again in a near future.&lt;/p&gt;</content><author><name>leiko</name></author><summary type="html">Please be aware that this site is a work in progress currently. You may find unfinished docs, articles.</summary></entry><entry><title type="html">Welcome to Kevoree!</title><link href="http://kevoree.org/blog/2017/06/29/welcome-to-kevoree.html" rel="alternate" type="text/html" title="Welcome to Kevoree!" /><published>2017-06-29T20:16:41-05:00</published><updated>2017-06-29T20:16:41-05:00</updated><id>http://kevoree.org/blog/2017/06/29/welcome-to-kevoree</id><content type="html" xml:base="http://kevoree.org/blog/2017/06/29/welcome-to-kevoree.html">&lt;p&gt;Brace yourself, &lt;a href=&quot;https://kevoree.org&quot;&gt;kevoree.org&lt;/a&gt; is back with a brand new design.&lt;/p&gt;</content><author><name>leiko</name></author><summary type="html">Brace yourself, kevoree.org is back with a brand new design.</summary></entry></feed>

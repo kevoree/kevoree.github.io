@@ -9,9 +9,9 @@
 
 ### Usage example
 ```java
-KevScriptEngine kevs = new KevScriptEngine("https://new-registry.kevoree.org");
+KevScriptEngine kevs = new KevScriptEngine(new KevoreeConfig.Builder().useDefault().build());
 try {
-  final String script = "add node: JavaNode/LATEST/LATEST";
+  final String script = "add node: JavaNode";
   final KevoreeFactory factory = new DefaultKevoreeFactory(); // a factory to create models
   final ContainerRoot model = factory.createContainerRoot(); // create an empty model
   factory.root(model); // ignore this but make sure you do it :p
