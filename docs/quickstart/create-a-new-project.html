@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <title>Kevoree - Docs | KevScript | Web Editor</title>
+   <title>Kevoree - Docs | QuickStart | Create a new project</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
@@ -82,7 +82,7 @@
         </li>
       
         <li>
-          <a href="/docs/quickstart/create-a-new-project.html">Create a new project</a>
+          <a href="/docs/quickstart/create-a-new-project.html" class="active">Create a new project</a>
           
         </li>
       
@@ -104,7 +104,7 @@
         </li>
       
         <li>
-          <a href="/docs/kevscript/web-editor.html" class="active">In the Web editor</a>
+          <a href="/docs/kevscript/web-editor.html">In the Web editor</a>
           
         </li>
       
@@ -138,27 +138,61 @@
       </div>
 
       <div class="inner-content">
-        <h2 id="kevscript-in-the-web-editor">KevScript in the Web editor</h2>
-<p>In the <a href="http://editor.kevoree.org/#/kevscript">Kevoree Web Editor</a> you can execute KevScript files directly from your browser.</p>
+        <h2 id="create-a-new-project">Create a new project</h2>
+
+        <ul class="nav nav-tabs" role="tablist">
+          
+          <li role="presentation" class="active">
+            <a href="#js" role="tab" data-toggle="tab">JavaScript</a>
+          </li>
+          
+        </ul>
+
+        <div class="tab-content">
+          
+          <div class="tab-pane active" id="js">
+            
+            <p>To create a Kevoree project targeting Node.js or Web browsers you need to have the <code class="highlighter-rouge">kevoree-cli</code> installed.</p>
 
 <blockquote>
-  <p><a href="http://editor.kevoree.org/#/kevscript" target="\_blank">Execute</a> your KevScript directly from your browser!</p>
+  <p>If you do not have the CLI installed yet, you can do it by following this <a href="/docs/getting-started/installation.html">installation page</a>.</p>
+
+  <p>TL;DR <code class="highlighter-rouge">npm i -g kevoree-cli</code></p>
 </blockquote>
 
-<p><img src="/images/docs/kevscript/hint.png" alt="WebEditor KevScript engine with auto-complete" /></p>
+<h3 id="scaffolding-a-new-project">Scaffolding a new project</h3>
+<p>The Kevoree CLI provides a command in order to scaffold a JavaScript project with everything that is needed to get started straight away.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>kevoree create my-project
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<p>The KevScript engine in the Web editor is based on the NodeJS module <a href="https://github.com/kevoree/kevoree-js-kevscript">kevoree-kevscript</a> and is bundled as a <a href="https://codemirror.net/">CodeMirror</a> mode available <a href="https://github.com/kevoree/cm-kevscript">here</a>.</p>
+<p>You will be asked for a few questions, once answered, a bunch of files will be generated.</p>
 
-<h3 id="kevoree-registry-setting">Kevoree Registry setting</h3>
-<p>Every KevScript engine needs to be able to access a <a href="/docs/registry/purpose.html">Kevoree Registry</a> somewhere in order to resolve the <strong>TypeDefinitions</strong> and there <strong>DeployUnits</strong>.<br />
-To specify a registry other than the official <code class="highlighter-rouge">https://registry.kevoree.org</code>, you can go to the <code class="highlighter-rouge">/#/settings</code> page of the Web editor <a href="http://editor.kevoree.org/#/settings">here</a> and modify the <strong>Kevoree Registry</strong> input field.</p>
+<p><img src="/images/docs/quick-start/create-new-project.png" alt="Create new project" /></p>
 
-<p><img src="/images/docs/kevscript/registry_url.png" alt="WebEditor Registry url setting" /></p>
+<p>Once generated you have to go to the created directory:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nb">cd </span>my-project
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<p>And install the dependencies and dev dependencies using <code class="highlighter-rouge">npm</code> or <code class="highlighter-rouge">yarn</code>:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>npm i
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<h3 id="auto-complete-feature">Auto-complete feature</h3>
-<p>The editor comes with an auto-complete feature available using <code class="highlighter-rouge">Ctrl-Space</code> depending on the current cursor position.<br />
-It also executes the script <em>as-you-type</em> giving you success/error/warning feedbacks directly on the screen.</p>
+<h3 id="start-my-project">Start my project</h3>
+<p>You can start your generated project by running <code class="highlighter-rouge">npm start</code></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>npm start
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<p><em>NB: <code class="highlighter-rouge">npm start</code> is a shortcut for <code class="highlighter-rouge">node node_modules/.bin/kevoree-scripts build &amp;&amp; node node_modules/.bin/kevoree-scripts start</code></em></p>
 
+          </div>
+          
+        </div>
       </div>
     </div>
   </div>
