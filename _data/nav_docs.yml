@@ -12,6 +12,8 @@
   items:
     - id: helloworld
       title: HelloWorld
+    - id: create-a-new-project
+      title: Create a new project
     - id: lifecycle
       title: Lifecycle
 -
