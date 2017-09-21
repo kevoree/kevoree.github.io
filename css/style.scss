@@ -86,6 +86,7 @@ a:hover {
       img[src^="/"] {
         align-self: center;
         box-shadow: 0px 3px 10px #333;
+        max-width: 900px;
       }
 
       .post {
