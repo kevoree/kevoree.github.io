@@ -10355,6 +10355,7 @@ a:hover {
 .container .content .inner-content img[src^="/"] {
   align-self: center;
   box-shadow: 0px 3px 10px #333;
+  max-width: 900px;
 }
 .container .content .inner-content .post {
   padding-bottom: 35px;
