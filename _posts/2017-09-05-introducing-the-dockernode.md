@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Introducing the DockerNode
-date:   Thu Sep 21 17:50:55 CEST 2017
+date:   2017-09-21 17:50:55 +0200
 section: blog
 categories: blog
 author:
