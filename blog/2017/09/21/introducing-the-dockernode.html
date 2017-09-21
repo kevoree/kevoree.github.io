@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <title>Kevoree - Welcome to Kevoree!</title>
+   <title>Kevoree - Introducing the DockerNode</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.css" />
@@ -57,13 +57,13 @@
     <h3>Recent posts</h3>
     <ul class="nav">
       
-        <li><a href="/blog/2017/09/21/introducing-the-dockernode.html">Introducing the DockerNode</a></li>
+        <li><a href="/blog/2017/09/21/introducing-the-dockernode.html" class="active">Introducing the DockerNode</a></li>
       
         <li><a href="/blog/2017/09/05/a-new-release-is-out.html">A new release is out</a></li>
       
         <li><a href="/blog/2017/06/30/work-in-progress.html">Work in progress</a></li>
       
-        <li><a href="/blog/2017/06/29/welcome-to-kevoree.html" class="active">Welcome to Kevoree!</a></li>
+        <li><a href="/blog/2017/06/29/welcome-to-kevoree.html">Welcome to Kevoree!</a></li>
       
     </ul>
   </div>
@@ -72,15 +72,43 @@
 
       <div class="inner-content">
         <div class="post">
-          <h2>Welcome to Kevoree!</h2>
+          <h2>Introducing the DockerNode</h2>
           
           
           
-<p class="text-muted">Thu, 29 Jun 2017 20:16:41 -0500 by <a href="https://github.com/maxleiko" target="_blank">leiko</a></p>
+<p class="text-muted">Thu, 21 Sep 2017 10:50:55 -0500 by <a href="https://github.com/maxleiko" target="_blank">leiko</a></p>
 
 
           <hr />
-          <p>Brace yourself, <a href="https://kevoree.org">kevoree.org</a> is back with a brand new design.</p>
+          <p>We have just released a new Node type capable of <strong>managing a Docker engine</strong> by leveraging model@runtime.<br />
+Introduce the <strong>DockerNode</strong>.</p>
+
+<p><a href="/images/blog/introducing-the-dockernode/editor-view.png"><img src="/images/blog/introducing-the-dockernode/editor-view.png" alt="DockerNode editor overview" /></a></p>
+
+<h3 id="lets-get-started">Let’s get started</h3>
+<p>In order to test this new node, you need to get the latest <a href="/download/download.html">Kevoree Java Runtime</a>.</p>
+
+<p>Then create a KevScript file <code class="highlighter-rouge">/path/to/dockernode.kevs</code> with this configuration:</p>
+<textarea class="kevscript">add node0: DockerNode
+add sync: CentralizedWSGroup
+
+attach node0 sync
+
+set sync.isMaster/node0 = 'true'</textarea>
+
+<blockquote>
+  <p>The <strong>DockerNode</strong> is a decorator around the <strong>JavaNode</strong> so you can still use your previous JavaNode-related configurations</p>
+</blockquote>
+
+<p>And bootstrap your runtime using this KevScript:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>java -Dnode.bootstrap<span class="o">=</span>/path/to/dockernode.kevs -jar /path/to/kevoree.jar
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>And voilà!</p>
+
+<p><img src="/images/blog/introducing-the-dockernode/terminal.png" alt="DockerNode terminal" /></p>
 
         </div>
       </div>

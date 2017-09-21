@@ -1,5 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://kevoree.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://kevoree.org/" rel="alternate" type="text/html" /><updated>2017-09-21T11:17:34-05:00</updated><id>http://kevoree.org/</id><title type="html">Kevoree</title><subtitle>Model@runtime approach for distributed and reconfigurable systems
-</subtitle><entry><title type="html">A new release is out</title><link href="http://kevoree.org/blog/2017/09/05/a-new-release-is-out.html" rel="alternate" type="text/html" title="A new release is out" /><published>2017-09-05T03:48:00-05:00</published><updated>2017-09-05T03:48:00-05:00</updated><id>http://kevoree.org/blog/2017/09/05/a-new-release-is-out</id><content type="html" xml:base="http://kevoree.org/blog/2017/09/05/a-new-release-is-out.html">&lt;p&gt;We have just released &lt;strong&gt;new stable versions&lt;/strong&gt; of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Java&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeJS&lt;/code&gt; platforms:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://kevoree.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://kevoree.org/" rel="alternate" type="text/html" /><updated>2017-09-21T11:20:41-05:00</updated><id>http://kevoree.org/</id><title type="html">Kevoree</title><subtitle>Model@runtime approach for distributed and reconfigurable systems
+</subtitle><entry><title type="html">Introducing the DockerNode</title><link href="http://kevoree.org/blog/2017/09/21/introducing-the-dockernode.html" rel="alternate" type="text/html" title="Introducing the DockerNode" /><published>2017-09-21T10:50:55-05:00</published><updated>2017-09-21T10:50:55-05:00</updated><id>http://kevoree.org/blog/2017/09/21/introducing-the-dockernode</id><content type="html" xml:base="http://kevoree.org/blog/2017/09/21/introducing-the-dockernode.html">&lt;p&gt;We have just released a new Node type capable of &lt;strong&gt;managing a Docker engine&lt;/strong&gt; by leveraging model@runtime.&lt;br /&gt;
+Introduce the &lt;strong&gt;DockerNode&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/introducing-the-dockernode/editor-view.png&quot;&gt;&lt;img src=&quot;/images/blog/introducing-the-dockernode/editor-view.png&quot; alt=&quot;DockerNode editor overview&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;lets-get-started&quot;&gt;Let’s get started&lt;/h3&gt;
+&lt;p&gt;In order to test this new node, you need to get the latest &lt;a href=&quot;/download/download.html&quot;&gt;Kevoree Java Runtime&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then create a KevScript file &lt;code class=&quot;highlighter-rouge&quot;&gt;/path/to/dockernode.kevs&lt;/code&gt; with this configuration:&lt;/p&gt;
+&lt;textarea class=&quot;kevscript&quot;&gt;add node0: DockerNode
+add sync: CentralizedWSGroup
+
+attach node0 sync
+
+set sync.isMaster/node0 = 'true'&lt;/textarea&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The &lt;strong&gt;DockerNode&lt;/strong&gt; is a decorator around the &lt;strong&gt;JavaNode&lt;/strong&gt; so you can still use your previous JavaNode-related configurations&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And bootstrap your runtime using this KevScript:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;java -Dnode.bootstrap&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/path/to/dockernode.kevs -jar /path/to/kevoree.jar
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And voilà!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/introducing-the-dockernode/terminal.png&quot; alt=&quot;DockerNode terminal&quot; /&gt;&lt;/p&gt;</content><author><name>leiko</name></author><summary type="html">We have just released a new Node type capable of managing a Docker engine by leveraging model@runtime. Introduce the DockerNode.</summary></entry><entry><title type="html">A new release is out</title><link href="http://kevoree.org/blog/2017/09/05/a-new-release-is-out.html" rel="alternate" type="text/html" title="A new release is out" /><published>2017-09-05T03:48:00-05:00</published><updated>2017-09-05T03:48:00-05:00</updated><id>http://kevoree.org/blog/2017/09/05/a-new-release-is-out</id><content type="html" xml:base="http://kevoree.org/blog/2017/09/05/a-new-release-is-out.html">&lt;p&gt;We have just released &lt;strong&gt;new stable versions&lt;/strong&gt; of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Java&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeJS&lt;/code&gt; platforms:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Java&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;v5.5.0&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;NodeJS&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;v6.1.7&lt;/code&gt;&lt;/li&gt;
