@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about.html
 section: about
+footer: true
 ---
 ## About
 This project is mainly designed by:

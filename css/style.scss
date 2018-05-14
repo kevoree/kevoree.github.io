@@ -13,6 +13,10 @@ body {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   overflow-y: scroll;
+
+  > .container {
+    padding-bottom: 51px; // this gives some space for the footer to overlap
+  }
 }
 
 .CodeMirror {
@@ -64,10 +68,6 @@ a:hover {
     .inner-content {
       flex: 1;
       margin-left: 10px;
-
-      h1, h2, h3, h4, h5, h6 {
-        // margin-top: 10px;
-      }
 
       blockquote {
         background-color: $alert-warning-bg;
