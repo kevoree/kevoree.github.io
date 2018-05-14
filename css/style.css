@@ -10283,11 +10283,35 @@ button.close {
   color: #56b6c2;
 }
 
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border: none;
+  font-weight: 300;
+  color: #e9e9e9;
+  font-size: 15px;
+  background: #2D2D2D;
+  box-shadow: inset 0 10px 10px -5px #0d1116;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+footer p {
+  margin: 0;
+}
+
 body {
   padding-top: 50px;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   overflow-y: scroll;
+}
+body > .container {
+  padding-bottom: 51px;
 }
 
 .CodeMirror {
